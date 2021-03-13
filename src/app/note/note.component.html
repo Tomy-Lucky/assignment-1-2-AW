@@ -1,0 +1,25 @@
+<div>
+  <h1>Add record</h1>
+  <form #myForm="ngForm">
+    <label>Jogging date: </label>
+    <br>
+    <input [(ngModel)]="inputDate" id="inputDate" name="inputDate" type="date" placeholder="mm/dd/yyyy">
+    <br>
+    <label>Distance (m)</label>
+    <br>
+    <input [(ngModel)]="inputDistance" id="inputDistance" name="inputDistance" type="number" placeholder="0">
+    <br>
+    <label>Time (s)</label>
+    <br>
+    <input [(ngModel)]="inputTime" id="inputTime" name="inputTime" type="text" placeholder="0">
+    <button (click)='save()'>Save</button>
+  </form>
+  <div>
+    <h3>Results:</h3>
+    <ul *ngFor="let result of results">
+      <li>{{result.inputDate}} - {{result.inputDistance}} - {{result.inputTime}}</li>
+    </ul>
+  </div>
+</div>
+
+
